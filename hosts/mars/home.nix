@@ -11,6 +11,7 @@
     # Include the results of the hardware scan.
     ../../modules/user/apps/starship/starship.nix
     ../../modules/user/apps/fastfetch/fastfetch.nix
+    ../../modules/user/apps/git/git.nix
   ];
 
   nixpkgs.config = {
