@@ -8,23 +8,13 @@
 {
   programs.zsh = {
     enable = true;
-    initExtra = builtins.readFile ./.zshrc;
+    initContent = builtins.readFile ./.zshrc;
+    syntaxHighlighting.enable = true;
+    autosuggestion.enable = true;
     oh-my-zsh = {
-      enable = true;
-      theme = "robbyrussell";
-      plugins = [
-        "git"
-      ];
+      enable  = true;
+      theme   = "robbyrussell";
+      plugins = [ "git" "z" ];
     };
-    plugins = [
-      {
-        name = pkgs.zsh-autosuggestions.pname;
-        src = pkgs.zsh-autosuggestions.src;
-      }
-      {
-        name = pkgs.zsh-syntax-highlighting.pname;
-        src = pkgs.zsh-syntax-highlighting.src;
-      }
-    ];
   };
 }
