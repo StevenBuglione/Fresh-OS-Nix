@@ -19,7 +19,7 @@
 
   home = {
     username = "${userSettings.username}";
-    homeDirectory = "/home/sbuglione";
+    homeDirectory = "/home/${userSettings.username}";
     stateVersion = "25.05";
 
     packages = with pkgs; [
